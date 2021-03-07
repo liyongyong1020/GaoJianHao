@@ -147,6 +147,17 @@ void TraCICommandInterface::Vehicle::setSpeed(double speed)
     ASSERT(buf.eof());
 }
 
+void TraCICommandInterface::Vehicle::changeLane(uint8_t laneIndex,double durationTime)
+{
+    uint8_t variableId = CMD_CHANGELANE;
+    uint8_t variableType = TYPE_COMPOUND;
+    int32_t count = 2;
+    uint8_t laneType = TYPE_BYTE;
+    uint8_t durationType = TYPE_DOUBLE;
+    TraCIBuffer buf = traci->connection.query(CMD_SET_VEHICLE_VARIABLE,TraCIBuffer() << variableId << nodeId << variableType << count << laneType << laneIndex << durationType << durationTime);
+    ASSERT(buf.eof());
+}
+
 void TraCICommandInterface::Vehicle::setMaxSpeed(double speed)
 {
     uint8_t variableId = VAR_MAXSPEED;

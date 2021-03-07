@@ -229,6 +229,7 @@ void DemoBaseApplLayer::handleSelfMsg(cMessage* msg)
 {
     switch (msg->getKind()) {
     case SEND_BEACON_EVT: {
+        EV << "Send beacon with interval " << beaconInterval << " s" << endl;
         DemoSafetyMessage* bsm = new DemoSafetyMessage();
         populateWSM(bsm);
         sendDown(bsm);

@@ -35,30 +35,31 @@ network Scenario
         double playgroundSizeX @unit(m); // x size of the area the nodes are in (in meters)
         double playgroundSizeY @unit(m); // y size of the area the nodes are in (in meters)
         double playgroundSizeZ @unit(m); // z size of the area the nodes are in (in meters)
-        @display("bgb=$playgroundSizeX,$playgroundSizeY");
+        @display("bgb=733,444");
     submodules:
         obstacles: ObstacleControl {
-            @display("p=240,50");
+            @display("p=288,35");
         }
         annotations: AnnotationManager {
-            @display("p=260,50");
+            @display("p=410,35");
         }
         connectionManager: ConnectionManager {
             parameters:
-                @display("p=150,0;i=abstract/multicast");
+                @display("p=139,35;i=abstract/multicast");
         }
         world: BaseWorldUtility {
             parameters:
                 playgroundSizeX = playgroundSizeX;
                 playgroundSizeY = playgroundSizeY;
                 playgroundSizeZ = playgroundSizeZ;
-                @display("p=30,0;i=misc/globe");
+                @display("p=36,35;i=misc/globe");
         }
         manager: TraCIScenarioManagerLaunchd {
             parameters:
-                @display("p=512,128");
+                @display("p=515,35");
         }
         node[0]: Car {
+            @display("p=74,165");
         }
 
     connections allowunconnected:

@@ -137,6 +137,7 @@ public:
 
         void setSpeedMode(int32_t bitset);
         void setSpeed(double speed);
+        void changeLane(uint8_t laneIndex,double durationTime);
         void setMaxSpeed(double speed);
         TraCIColor getColor();
         void setColor(const TraCIColor& color);

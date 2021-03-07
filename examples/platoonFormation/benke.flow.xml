@@ -1,0 +1,6 @@
+<flows> 
+<flow
+id="0" color="1,1,0"  from="D1"  to="D1" begin="0" accel="0.001" 
+decel="0.001" maxSpeed="5" vehsPerHour="1300" number="10" departLane="0" departSpeed="5" />
+
+</flows>

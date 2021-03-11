@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges>
+  <edge id="D1" from="1" to="2" type="a" speed="5"/>
+</edges>

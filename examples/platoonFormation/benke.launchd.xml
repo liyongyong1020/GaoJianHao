@@ -1,7 +1,0 @@
-<launch>
-    <copy file="benke.net.xml"/>
-    <copy file="benke.rou.xml"/>
-    <copy file="benke.poly.xml"/>
-    <copy file="benke.sumo.cfg" type="config"/>
-</launch>    
-
